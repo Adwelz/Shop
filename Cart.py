@@ -2,7 +2,8 @@ from Item import Item
 from Shop import Shop
 
 
-global nbr_of_item # global data
+global freeship_price # global data
+freeship_price = 100
 
 class Cart:
     
@@ -13,10 +14,8 @@ class Cart:
         self.client = client
         self.client.carts.append(id)
         self.items = []
-        nbr_of_item = 0
 
     def add2Cart(self,id_item):
-        nbr_of_item +=1
         self.items.append(id_item)
         Shop().items[id_item].nbr_left -=1
 
@@ -28,3 +27,7 @@ class Cart:
         for item in self.items:
             sum+=item.price
         return sum
+    
+    def freeship(self):
+        if self.getCartPrice()>freeship_price:
+            return True

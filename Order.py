@@ -11,8 +11,8 @@ class Order:
         sum = 0
         for cart in self.client.carts:
             sum+=cart.getCartPrice()
-
-        self.client.bonus +=Membership.bonusMembership(sum)
+        if self.client.membership ==True:
+            self.client.bonus +=Membership.bonusMembership(sum)
         return sum
     
     def save_order(self):
