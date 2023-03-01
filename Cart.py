@@ -4,7 +4,7 @@ class Cart:
     def __init__(self, id, client) -> None:
         self.id = id
         self.client = client
-        self.client.carts.append(self)
+        self.client.carts.append(id)
         self.items = []
 
     def add2Cart(self,item):

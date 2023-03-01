@@ -6,7 +6,7 @@ class Order:
         self.id = id
         self.client = client
 
-    def getPrice(self):
+    def get_price(self):
         for cart in self.client.carts:
             sum = 0
             sum+=cart.getCartPrice()
@@ -14,3 +14,8 @@ class Order:
         if client.membership == True:
             sum = Membership.priceWithMembership(sum)
         return sum
+    
+    def save_order(self):
+        self.price = self.get_price()
+        self.client.carts = []
+        self.client.orders.orders.append(self.id)

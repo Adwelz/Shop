@@ -5,6 +5,7 @@ class Client:
         self.phone=phone
         self.email=email
         self.membership= membership
-        self.cart =[]
+        self.carts =[]
+        self.orders = []
         
 # dataclass
