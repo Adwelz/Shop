@@ -1,5 +1,6 @@
 class Item:
-    def __init__(self,id,name,consumation_date) -> None:
+    def __init__(self,id, nbr_left, price) -> None:
         self.id = id
-        self.name = name
-        self.consumation_date = consumation_date
+        self.nbr = nbr_left
+        self.price = price
+
