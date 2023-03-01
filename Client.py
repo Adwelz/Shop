@@ -4,6 +4,7 @@ class Client:
         self.lastname=lastname
         self.phone=phone
         self.email=email
+        self.favorite_color = favorite_color #
         self.carts =[]
         self.bonus = 0 
 
