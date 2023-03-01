@@ -18,4 +18,4 @@ class Order:
     def save_order(self):
         self.price = self.get_price()
         self.client.carts = []
-        self.client.orders.orders.append(self.id)
+        self.client.orders.append(self.id)
