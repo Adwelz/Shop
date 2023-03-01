@@ -6,3 +6,4 @@ class Membership:
     def priceWithMembership(price):
         return price * 0.8
     
+# Lazy class

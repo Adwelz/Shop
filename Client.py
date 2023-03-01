@@ -1,4 +1,7 @@
 class Client:
+
+    limited_number_of_carts = 5 # Temporary field
+
     def __init__(self,firstname, lastname, phone, email,password, membership) -> None:
         self.firstname=firstname
         self.lastname=lastname
