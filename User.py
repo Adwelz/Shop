@@ -1,0 +1,4 @@
+class User:
+    def __init__(self, id, password) -> None:
+        self.id = id 
+        self.password = password
